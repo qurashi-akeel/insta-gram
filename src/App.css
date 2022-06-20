@@ -7,6 +7,15 @@
   margin: auto;
 }
 
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin: auto;
+}
+
 .logo {
   margin-top: 20px;
 }
@@ -81,8 +90,8 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  padding: 2px 2px 15px 2px;
-  width: min(500px, 70vw);
+  padding: 10px 10px 15px 10px;
+  width: 85vw;
   text-decoration: none;
   color: #000;
   border: #f1f1f1 4px solid;

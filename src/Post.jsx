@@ -53,7 +53,7 @@ const Post = () => {
   };
 
   return (
-    <div className="App">
+    <div className="post">
       <Link to={'/'} className="logo">
         <img src={logo} alt="logo" width="30%" height="auto" />
       </Link>
