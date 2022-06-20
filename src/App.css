@@ -1,38 +1,172 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 2px;
+  width: max(300px, 22vw);
+  text-decoration: none;
+  color: #000;
+  border: #f1f1f1 4px solid;
+}
+
+.card > .extra {
+  padding: 5px 20px 20px 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.btns > button {
+  flex-wrap: wrap;
+  border: 1px solid #d8d8d8;
+  height: 36px;
+  width: 30%;
+  padding: 0.3em 0.5em;
+  background-color: #ffffff;
+  color: #0b5989;
+  cursor: pointer;
+  transition: color 0.3s ease-in 0s, background-color 0.3s ease-in 0s;
+}
+
+.btns > button:hover {
+  background-color: #0b5989;
+  color: #ffffff;
+}
+
+.errContainer {
+  background: #f1f5f9;
+}
+
+.err {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 35vh 0;
+  background: #f1f5f9;
+}
+
+.postCard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2px 2px 15px 2px;
+  width: min(500px, 70vw);
+  text-decoration: none;
+  color: #000;
+  border: #f1f1f1 4px solid;
+}
+
+.commentWrapper {
+  border-bottom: 2px solid #f1f1f1;
+  margin: 5px 15px;
+  padding: 15px 20px;
+}
+
+form {
+  margin: 5px 15px;
+  padding: 20px;
+}
+
+.commentWrapper > .comment {
+  color: #595c5b;
+}
+.commentWrapper > .author {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #0056af;
+}
+
+.caption {
+  margin: 20px;
+}
+
+input,
+input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+.postBtns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.postBtn {
+  display: block;
+  width: 90% !important;
+}
+
+.wh {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: scale(0.1);
+  z-index: 10;
+}
+
+a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (min-width: 1200px) {
+  .err {
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    padding: 20vh 0;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 770px) {
+  .postCard {
+    flex-direction: row;
+    width: max(500px, 70vw);
   }
-  to {
-    transform: rotate(360deg);
+  .postImg {
+    width: 35vw;
+  }
+  .postBtns {
+    flex-direction: row;
+    /* width: ; */
+  }
+  .postBtn {
+    width: 45% !important;
   }
 }

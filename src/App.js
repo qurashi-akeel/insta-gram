@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
+import Card from './components/Card';
+
+import posts from './data/posts';
+import comments from './data/comments';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} alt="logo" width="25%" height="auto" className="logo" />
+      <div className="cards">
+        {posts.map((post) => {
+          return (
+            <Card
+              post={post}
+              key={post.code}
+              cmtLength={comments[post.code]?.length || 0}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
