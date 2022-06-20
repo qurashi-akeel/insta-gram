@@ -11,7 +11,6 @@ const Post = () => {
   const post = posts.filter((post) => post.code === postId)[0];
   const postComments = comments[postId];
   const [comment, setComment] = useState(postComments || []);
-  console.log(comment)
   const [newComment, setNewComment] = useState({
     user: '',
     text: '',
@@ -22,6 +21,7 @@ const Post = () => {
     if (newComment.user !== '' && newComment.text !== '') {
       setComment([...comment, newComment]);
       setNewComment({ text: '', user: '' });
+      refComment.current.blur();
     }
   };
 
@@ -45,9 +45,11 @@ const Post = () => {
     return () => clearTimeout(timer);
   }, [likes]);
 
-  const ref = useRef(null);
+  const refAuthor = useRef();
+  const refComment = useRef();
+
   const focusInp = () => {
-    ref.current.focus();
+    refAuthor.current.focus();
   };
 
   return (
@@ -90,7 +92,7 @@ const Post = () => {
             : ''}
           <form onSubmit={handleCommentSubmit}>
             <input
-              ref={ref}
+              ref={refAuthor}
               type="text"
               placeholder="Author"
               value={newComment.user}
@@ -99,6 +101,7 @@ const Post = () => {
               }
             />
             <input
+              ref={refComment}
               type="text"
               value={newComment.text}
               placeholder="Comment"
