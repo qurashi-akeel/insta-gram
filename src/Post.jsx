@@ -10,7 +10,8 @@ const Post = () => {
   const postId = useLocation().pathname.split('/')[2];
   const post = posts.filter((post) => post.code === postId)[0];
   const postComments = comments[postId];
-  const [comment, setComment] = useState(postComments);
+  const [comment, setComment] = useState(postComments || []);
+  console.log(comment)
   const [newComment, setNewComment] = useState({
     user: '',
     text: '',
