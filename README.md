@@ -1,8 +1,6 @@
 # Getting Started with [Instaz](https://instaz.vercel.app/) & BuyProperly.
 
-This app is instagram clone created with the most popular technology "React".
-
-This app contains some basic features of instagram as well as responsiveness.
+This app is instagram clone created by __Iqueal Yaseen Qurashi__ with the most popular technology *"React"* It contains some basic features of instagram such as *like & comment*. This app is *responsive* as well. Below are some of the screenshots to review the same.
 
 ## Responsive:
 
