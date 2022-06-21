@@ -142,16 +142,37 @@ input:focus {
 }
 
 .wh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   left: 0;
   top: 0;
-  transform: scale(0.1);
-  z-index: 10;
+}
+
+.whItemMain {
+  color: #0b5989;
+  position: absolute;
+  font-size: 120px;
+  top: 15%;
+}
+
+.whItem {
+  color: #0b5989;
+  position: absolute;
+  font-size: 30vw;
+  top: 12vw;
 }
 
 a:hover {
   color: white;
+}
+
+@media only screen and (min-width: 1400px) {
+  .whItemMain {
+    top: 20%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -177,5 +198,9 @@ a:hover {
   }
   .postBtn {
     width: 45% !important;
+  }
+  .whItem {
+    font-size: 16vw;
+    top: 5vw;
   }
 }

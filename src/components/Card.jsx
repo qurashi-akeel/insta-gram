@@ -31,7 +31,11 @@ const Card = ({ post, cmtLength }) => {
       <Link to={`/comments/${post.code}`}>
         <div style={{ position: 'relative' }}>
           <img src={post.display_src} width="100%" alt={post.caption} />
-          <img src={wh} alt="" width={100} className="wh" style={myStyle} />
+          <div className="wh" style={myStyle}>
+              <img src={wh} alt="" width='100%' />
+              <span className='whItemMain'>{likes}</span>
+            </div>
+          {/* <img src={wh} alt="" width={100} className="wh" style={myStyle} /> */}
         </div>
       </Link>
       <div className="extra">

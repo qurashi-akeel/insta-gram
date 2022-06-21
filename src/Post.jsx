@@ -67,7 +67,10 @@ const Post = () => {
               alt=""
               onDoubleClick={handleLike}
             />
-            <img src={wh} alt="" width={100} className="wh" style={myStyle} />
+            <div className="wh" style={myStyle}>
+              <img src={wh} alt="" width='100%' />
+              <span className='whItem'>{likes}</span>
+            </div>
           </div>
           <p className="caption">{post.caption}</p>
           <div className="btns postBtns">
